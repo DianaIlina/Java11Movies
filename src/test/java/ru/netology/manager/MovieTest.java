@@ -29,7 +29,7 @@ public class MovieTest {
     public void shouldCheckLastMovie() {
         this.fillWithFilms(manager);
         String expected = "Человек-Невидимка";
-        String actual = manager.getFromTheLast()[0].getName();
+        String actual = manager.findLast()[0].getName();
         assertEquals(expected, actual);
     }
 
@@ -74,7 +74,7 @@ public class MovieTest {
         this.fillWithFilms(manager);
 
         Movie[] expected = {movie5, movie4, movie3};
-        Movie[] actual = manager.getFromTheLast();
+        Movie[] actual = manager.findLast();
 
         assertArrayEquals(expected, actual);
     }

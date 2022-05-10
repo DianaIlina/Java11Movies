@@ -43,7 +43,7 @@ public class MovieManager {
         return resultLength;
     }
 
-    public Movie[] getFromTheLast() {
+    public Movie[] findLast() {
         Movie[] result = new Movie[this.findLastLength()];
         for (int i = 0; i < result.length; i++) {
             result[i] = movies[movies.length - 1 - i];

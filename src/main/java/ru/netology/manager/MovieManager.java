@@ -1,8 +1,12 @@
 package ru.netology.manager;
 
 public class MovieManager {
-    public Movie[] movies = new Movie[0];
-    int limit;
+    private Movie[] movies = new Movie[0];
+    private int limit;
+
+    public int getLimit() {
+        return limit;
+    }
 
     public MovieManager() {
         this.limit = 10;
@@ -16,7 +20,7 @@ public class MovieManager {
         int length = movies.length + 1;
         Movie[] tmp = new Movie[length];
         for (int i = 0; i < movies.length; i++) {
-            tmp[0] = movies[0];
+            tmp[i] = movies[i];
         }
         tmp[tmp.length - 1] = newMovie;
         movies = tmp;
